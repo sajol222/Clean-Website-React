@@ -12,16 +12,16 @@ import {
 } from './navbarElements';
 
 
-function Navbar() {
+const Navbar=({toggle})=> {
     return(
         <>
             <Nav>
-                <NavBarContainer>
+                <NavBarContainer >
                     <NavbarLogo to ='/'>
                         sajol
                     </NavbarLogo>
 
-                    <MobileIcon>
+                    <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavElements>
@@ -46,7 +46,7 @@ function Navbar() {
                     </NavElements>
 
                     <NavBtn>
-                        <NavBtnLink to = '/signin'>
+                        <NavBtnLink to = '/signin' >
                             Sign In
                         </NavBtnLink>
                     </NavBtn>
